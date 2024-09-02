@@ -1,0 +1,4 @@
+Create Libraries folder in repo,
+Create include and lib folder in Libraries folder,
+cut paste glfw3.lib from glfw into lib folder 
+cut paste GLFW folder from glfw/include into include folder 
