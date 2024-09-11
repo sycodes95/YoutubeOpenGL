@@ -14,7 +14,7 @@ const char* fragmentShaderSource = "#version 330 core\n"
 "out vec4 FragColor;\n"
 "void main()\n"
 "{\n"
-"   FragColor = vec4(0.8f, 0.3f, 0.02f, 1.0f);\n"
+"   FragColor = vec4(1.0f, 1.0f, 1.0f, 1.0f);\n"
 "}\n\0";
 
 int main() 
@@ -71,14 +71,24 @@ int main()
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
 
+	//GLfloat vertices[] =
+	//{
+	//	-0.75f, -0.75f * float(sqrt(3)) / 3, 0.0f, // Lower left corner
+	//	0.75f, -0.75f * float(sqrt(3)) / 3, 0.0f, // Lower right corner
+	//	-0.0f, 0.75f * float(sqrt(3)) * 2 / 3, 0.0f, // Upper corner
+	//	-0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f, // Inner left
+	//	0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f, // Inner right
+	//	0.0f /2, -0.5f * float(sqrt(3)) / 3, 0.0f, // Inner down
+	//};
+
 	GLfloat vertices[] =
 	{
 		-0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f, // Lower left corner
 		0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f, // Lower right corner
-		0.0f, 0.5f * float(sqrt(3)) * 2 / 3, 0.0f, // Upper corner
+		-0.0f, 0.5f * float(sqrt(3)) * 2 / 3, 0.0f, // Upper corner
 		-0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f, // Inner left
 		0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f, // Inner right
-		0.0f /2, -0.5f * float(sqrt(3)) / 3, 0.0f, // Inner down
+		0.0f / 2, -0.5f * float(sqrt(3)) / 3, 0.0f, // Inner down
 	};
 
 	GLuint indices[] =
@@ -117,7 +127,8 @@ int main()
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
 	// specify the color of the background
-	glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
+	//glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	//glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
 	// Clean the back buffer and assign the new color to it
 	glClear(GL_COLOR_BUFFER_BIT);
 	// Swap the back buffer with the front buffer
@@ -127,7 +138,7 @@ int main()
 	// main while loop
 	while (!glfwWindowShouldClose(window)) 
 	{
-		glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		glUseProgram(shaderProgram);
 		glBindVertexArray(VAO);
