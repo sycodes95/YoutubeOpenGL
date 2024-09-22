@@ -1,4 +1,8 @@
-﻿  shaderClass.cpp
+﻿  EBO.cpp
+  Main.cpp
+  VAO.cpp
   VBO.cpp
+  shaderClass.cpp
   Generating Code...
-  YoutubeOpenGL.vcxproj -> C:\Users\sycod\source\repos\YoutubeOpenGL\x64\Debug\YoutubeOpenGL.exe
+  glad.c
+  YoutubeOpenGL.vcxproj -> C:\Users\yvyda\source\repos\YoutubeOpenGL\x64\Debug\YoutubeOpenGL.exe

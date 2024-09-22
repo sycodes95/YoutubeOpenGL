@@ -71,12 +71,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\sycod\source\repos\YoutubeOpenGL\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\sycod\source\repos\YoutubeOpenGL\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\yvyda\source\repos\YoutubeOpenGL\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\yvyda\source\repos\YoutubeOpenGL\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\sycod\source\repos\YoutubeOpenGL\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\sycod\source\repos\YoutubeOpenGL\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\yvyda\source\repos\YoutubeOpenGL\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\yvyda\source\repos\YoutubeOpenGL\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -140,9 +140,11 @@
     <Text Include="openGLSetup.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EBO.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="shaderClass.cpp" />
+    <ClCompile Include="VAO.cpp" />
     <ClCompile Include="VBO.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -151,7 +153,9 @@
     <None Include="default.vert" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EBO.h" />
     <ClInclude Include="shaderClass.h" />
+    <ClInclude Include="VAO.h" />
     <ClInclude Include="VBO.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
